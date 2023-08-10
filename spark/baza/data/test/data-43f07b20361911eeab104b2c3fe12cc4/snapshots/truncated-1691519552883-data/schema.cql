@@ -1,0 +1,35 @@
+CREATE TABLE IF NOT EXISTS test.data (
+    id text PRIMARY KEY,
+    complete int,
+    countries text,
+    created_t text,
+    creator text,
+    lang text,
+    last_modified_t text,
+    lc text,
+    nutrition_data_per text,
+    nutrition_data_prepared_per text,
+    nutrition_score_beverage int,
+    pnns_groups_1 text,
+    pnns_groups_2 text,
+    popularity_key text,
+    rev int,
+    update_key text
+) WITH ID = 43f07b20-3619-11ee-ab10-4b2c3fe12cc4
+    AND additional_write_policy = '99p'
+    AND bloom_filter_fp_chance = 0.01
+    AND caching = {'keys': 'ALL', 'rows_per_partition': 'NONE'}
+    AND cdc = false
+    AND comment = ''
+    AND compaction = {'class': 'org.apache.cassandra.db.compaction.SizeTieredCompactionStrategy', 'max_threshold': '32', 'min_threshold': '4'}
+    AND compression = {'chunk_length_in_kb': '16', 'class': 'org.apache.cassandra.io.compress.LZ4Compressor'}
+    AND memtable = 'default'
+    AND crc_check_chance = 1.0
+    AND default_time_to_live = 0
+    AND extensions = {}
+    AND gc_grace_seconds = 864000
+    AND max_index_interval = 2048
+    AND memtable_flush_period_in_ms = 0
+    AND min_index_interval = 128
+    AND read_repair = 'BLOCKING'
+    AND speculative_retry = '99p';
